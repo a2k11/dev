@@ -1,0 +1,28 @@
+<h2><%= @image.name.capitalize%></h2>
+
+<div><%= @image.description%></div>
+
+<div>
+  <ul>
+    <li>
+      <a href="/">Index</a>
+    </li>
+    <li>
+    <a href="/galleries/<%= @image.gallery_id %>">Back to Gallery </a>
+    </li>
+    <li>
+      <a href="/galleries/<%= @image.gallery_id %>/images/<%= @image.id%>/edit">
+        Edit This Picture </a>
+    </li>
+    <li>
+      <form action= "/galleries/<%= @image.gallery_id %>/images/<%= @image.id%>" method= "POST">
+        <input type= "hidden" name= "_method" value= "DELETE">
+          <input type= "submit" value= "Delete Image">
+        </form>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <img src="<%= @image.url %>">
+</div>

@@ -1,0 +1,10 @@
+<h2> Here are the Decks </h2>
+
+<ul>
+  <% @decks.each do |deck| %>
+    <li>
+      <a href="/decks/<%=deck.id%>"><%= deck.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>

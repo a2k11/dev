@@ -1,0 +1,17 @@
+<h2> <%= @deck.name.capitalize %> Page </h2>
+
+<div>
+  <p>What would you like to do?</p>
+</div>
+
+<div>
+  <ul>
+    <li>
+      <a href="/">Choose another deck</a>
+    </li>
+    <li>
+      <a href="/decks/<%=@deck.id%>/cards">Play the Game</a>
+    </li>
+  </ul>
+</div>
+

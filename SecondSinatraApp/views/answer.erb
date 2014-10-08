@@ -1,0 +1,19 @@
+<h2>Answer Page</h2>
+
+<% new_card = @deck.cards[1]%>
+<div>
+  <p>The answer to <%= @card.front %> is <%= @card.back %>.
+  </p>
+</div>
+<div>
+  <p> <%= @user_answer %> </p>
+</div>
+<div>
+  <ul>
+    <li>
+    <a href="/decks/<%=@deck.id%>/cards/<%= new_card.id%>">Next Card</a>
+    <li>
+      <a href="/">Index</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+<h2>UPDATE</h2>
+
+<form action="/galleries/<%= @gallery.id %>" method="POST">
+  <input type= "hidden" name ="_method" value="PATCH">
+  <div>
+    <label for="gallery_name">Gallery Name</label>
+    <input type="text" name="gallery[name]" id="gallery_name" value= "<%= @gallery.name%>">
+  </div>
+  <div>
+    <label for= "gallery_description">Gallery Description</label>
+    <input type="text" name="gallery[description]" id="gallery_description" value="<%= @gallery.description%>">
+  </div>
+  <div>
+    <input type="submit" value="Update Gallery" >
+  </div>
+
+</form>

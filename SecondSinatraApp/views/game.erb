@@ -1,0 +1,16 @@
+<h2> Guess The <%= @deck.name.capitalize %> Word </h2>
+
+
+<div>
+  <h3>Your word is: <%= @card.front %></h3>
+</div>
+<form method= "POST" action="/decks/<%= @deck.id %>/cards/<%= @card.id %>/answer">
+  <div>
+    <label for= "user_answer">In <%= @deck.name.capitalize %>?</label>
+    <input type= "text" name= "user[back]" id= "user_answer" >
+  </div>
+  <div>
+    <input type= "submit" value= "Submit">
+  </div>
+</form>
+

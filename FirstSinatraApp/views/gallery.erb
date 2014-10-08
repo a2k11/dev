@@ -1,0 +1,39 @@
+<h2> <%= @gallery.name %> Gallery </h2>
+
+<ul>
+  <li>
+    <a href="/">The Index YES!
+    </a>
+  </li>
+  <li>
+    <a href="/galleries/<%=@gallery.id%>/edit">Update Gallery</a>
+  </li>
+  <li>
+    <a href="/galleries/<%=@gallery.id%>/images/new">Add image </a>
+  </li>
+  <li>
+     <form action= "/galleries/<%= @gallery.id %>" method= "POST">
+        <input type= "hidden" name= "_method" value= "DELETE">
+          <input type= "submit" value= "Delete Gallery">
+  </li>
+</ul>
+
+
+<% @images.each do |image| %>
+  <div class="image">
+    <a href ="/galleries/<%=image.gallery_id%>/images/<%=image.id%>">
+      <img width="300" src="<%= image.url %>"></a>
+  </div>
+<% end %>
+
+
+<div>
+  <ul>
+    <% @othergalleries.each do |gallery| %>
+      <li>
+        <a href="/galleries/<%= gallery.id %>">
+          <%= gallery.name.capitalize %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>

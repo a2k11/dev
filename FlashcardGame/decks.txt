@@ -1,0 +1,17 @@
+2
+Japanese
+3
+Dog
+Inu
+Cat
+Neko
+Snake
+Hebi
+German
+3
+Dog
+Hund
+Cat
+Katze
+Snake
+Schlange

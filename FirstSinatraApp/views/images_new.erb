@@ -1,0 +1,19 @@
+<h2>Add an image quickly!</h2>
+
+<form method= "POST" action= "/galleries/<%=@gallery.id%>/images">
+  <div>
+    <label for= "image_name">Image Name</label>
+    <input type= "text" name= "images[name]" id = "image_name">
+  </div>
+  <div>
+    <label for= "image_url">Url</label>
+    <input type= "text" name= "images[url]" id = "image_url">
+  </div>
+  <div>
+    <label for= "image_description">Description</label>
+    <textarea name= "images[description]" id = "image_description"></textarea>
+  </div>
+  <div>
+    <input type= "submit" value="New Image">
+  </div>
+</form>

@@ -1,0 +1,20 @@
+<h2> Edit <%= @image.name.capitalize %> Image </h2>
+
+<form method= "POST" action= "/galleries/<%=@image.gallery_id%>/images/<%=@image.id%>">
+  <input type= "hidden" name= "_method" value= "PATCH">
+  <div>
+    <label for= "image_name">Image Name</label>
+    <input type= "text" name= "images[name]" id = "image_name" value= "<%=@image.name%>">
+  </div>
+  <div>
+    <label for= "image_url">Url</label>
+    <input type= "text" name= "images[url]" id = "image_url" value = "<%=@image.url %>">
+  </div>
+  <div>
+    <label for= "image_description">Description</label>
+    <textarea name= "images[description]" id = "image_description"><%= @image.description %></textarea>
+  </div>
+  <div>
+    <input type= "submit" value="Update Image">
+  </div>
+</form>

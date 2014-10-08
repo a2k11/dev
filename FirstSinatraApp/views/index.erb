@@ -1,0 +1,17 @@
+<h2>The Galleries</h2>
+
+<p><em>This page contains Links to Galleries</em></p>
+
+<ul>
+  <% @galleries.each do |gallery| %>
+    <li>
+      <a href="/galleries/<%= gallery.id %>">
+        <%=gallery.name.capitalize%>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<ul>
+  <li>
+    <a href="/galleries/new">New Gallery</a>
