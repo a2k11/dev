@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<% if current_user %>
+  <h3>Welcome <%= current_user.email %></h3>
+  <%= button_to "Not you?", sessions_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign up", new_user_path %>
+  <%= link_to "Sign in", new_sessions_path %>
+<% end %>  
+  
 <%= yield %>
 
 </body>

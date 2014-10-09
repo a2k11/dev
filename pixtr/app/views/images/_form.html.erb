@@ -1,8 +1,8 @@
-<%= form_for gallery do |form| %>
+<%= form_for [gallery, image] do |form| %>
   <div>
     <ul>
-      <% if gallery.errors.any? %>
-        <% gallery.errors.full_messages.each do |error_message| %>
+      <% if image.errors.any? %>
+        <% image.errors.full_messages.each do |error_message| %>
           <li>
             <%= error_message %>
           </li>
@@ -10,9 +10,8 @@
       <% end %>
     </ul>
   </div>
-
   <div>
-    <%= form.label :name, "Gallery Name"%>
+    <%= form.label :name, "Image Name"%>
     <%= form.text_field :name%>
   </div>
   <div>
@@ -20,8 +19,8 @@
     <%= form.text_area :description%>
   </div>
   <div>
-    <%= form.label :cover_image, "Cover Image URL"%>
-    <%= form.text_field :cover_image%>
+    <%= form.label :url, "Image URL"%>
+    <%= form.text_field :url%>
   </div>
   <%= form.submit %>
 <% end %>

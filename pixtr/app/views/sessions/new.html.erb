@@ -1,0 +1,7 @@
+<h1>Get up, Sign in</h1>
+
+<%= form_for :session, url: sessions_path do |form| %>
+  <%= form.label :email, "Email Address" %>
+  <%= form.text_field :email %>
+  <%= form.submit "Sign In" %>
+<% end %>
